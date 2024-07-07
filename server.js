@@ -48,6 +48,7 @@ app.use("/api/payment", paymentRouter);
 app.use(notFound);
 app.use(errorHandler);
 
+
 const port = process.env.PORT || 1000;
 
 app.listen(port, () => console.log(`Server is running on port ${port}`.yellow.underline));
