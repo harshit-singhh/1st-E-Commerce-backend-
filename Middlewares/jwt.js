@@ -15,7 +15,7 @@ export const Authenticated = (req, res, next) => {
   try {
     const decodedPayload = jwt.verify(token, process.env.JWT_SECRET);
 
-    req.user = decodedPayload.id;
+    req.user = decodedPayload;
     // res.json({message : "authentication completed and payload sent"})
     next();
   } catch (error) {
